@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario</title>
+    <style>
+      :root {
+        /* Paleta de colores */
+        --fondo: #adb5bd;
+        --input: #e9ecef;
+        --boton-primario: #4361ee;
+        --boton-secundario: #a9d6e5;
+        --text: #0077b6;
+
+        /* Tamaño de fuente */
+        --sm: 14px;
+        --md: 18px;
+        --lg: 25px;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        font-family: "Inter", sans-serif;
+        font-family: "Quicksand", sans-serif;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: var(--fondo);
+      }
+      .form-container {
+        width: 350px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px 20px;
+      }
+      .form-container-item {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      form {
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+      }
+
+      .boton-primario {
+        background-color: #eac4d5;
+        color: red;
+        margin-bottom: 12px;
+        border: none;
+        height: 50px;
+        border-radius: 8px;
+        font-size: var(--sm);
+      }
+      .input {
+        margin-bottom: 12px;
+        border: none;
+        background-color: var(--input);
+        height: 30px;
+        padding: 0 10px 0;
+        border-radius: 8px;
+      }
+      .boton-secundario {
+        background-color: var(--boton-primario);
+        color: white;
+        border: none;
+        height: 50px;
+        border-radius: 8px;
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .subtitle {
+        margin-top: 12px;
+        color: var(--boton-secundario);
+        text-decoration: none;
+        text-align: center;
+      }
+      .subtitle span {
+        color: red;
+        font-weight: bold;
+      }
+      h1 {
+        text-align: center;
+        color: var(--boton-primario);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="form-container">
+        <div class="form-container-item">
+          <h1>REGISTER NOW</h1>
+          <button class="boton boton-primario">Password not matched</button>
+          <form action="">
+            <!-- Nombre -->
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Enter your name"
+              class="input"
+            />
+            <!-- Email -->
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              class="input"
+            />
+            <!-- Password -->
+            <input
+              type="password"
+              name="Password"
+              placeholder="Enter your Password"
+              class="input"
+            />
+            <!-- Password -->
+            <input
+              type="password"
+              name="re-password"
+              placeholder="re-password"
+              class="input"
+            />
+            <input list="user" placeholder="User" class="input" />
+            <datalist id="user">
+              <option value="Admin"></option>
+              <option value="User"></option>
+              <option value="User DB"></option>
+            </datalist>
+          </form>
+          <button class="boton boton-secundario">Register now</button>
+          <a href="?" class="subtitle"
+            >already have an account? <span>login now!</span></a
+          >
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
